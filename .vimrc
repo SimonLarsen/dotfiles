@@ -37,6 +37,10 @@ noremap k gk
 " Leaves search highlighting
 map <Leader>n :nohlsearch<CR>
 
+" Lusty Explorer
+noremap <Tab> :LustyBufferExplorer<CR>
+noremap <F2> :LustyFilesystemExplorer<CR>
+
 " LaTeX suite stuff
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
