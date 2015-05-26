@@ -11,13 +11,15 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-PATH=$PATH:/home/simon/bin/bin
+PATH=$PATH:/home/simon/.gem/ruby/2.2.0/bin:/home/simon/c++/imgtogb/bin:/home/simon/gb/gbdk/bin:/home/simon/share/ncbi-blast-2.2.30+/bin/
 export PATH
 
 export PS1="$(print '%{\e[1;34m%}%n%{\e[0m%}') :: $(print '%{\e[0;34m%}%~%{\e[0m%}') $ "
 export CC=gcc
 export EDITOR=vim
 export BROWSER=firefox
+export GBDKDIR=/home/simon/gb/gbdk/
+export JOLIE_HOME=/usr/lib/jolie
 
 alias ls='ls --color=auto'
 alias lls='ls -l --color=auto'
@@ -28,6 +30,7 @@ alias mv='mv -i'
 alias rm='rm -I'
 
 alias sprunge='curl -F "sprunge=<-" http://sprunge.us'
+alias xpaste='xclip -out'
 
 # LESS/MAN colors and stuff, needed for git colored diff
 export LESS="$LESS -iR"

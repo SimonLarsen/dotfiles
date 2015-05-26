@@ -4,4 +4,5 @@ nm-applet &
 volwheel &
 dropboxd &
 setxkbmap dk &
+cbatticon &
 exec dbus-launch /usr/bin/awesome

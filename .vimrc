@@ -5,14 +5,13 @@ set mouse=a
 set hidden
 
 set autoindent
-set smartindent
+set smartcase
 set tabstop=4
 set shiftwidth=4
 set scrolloff=5
 set showmatch
 set guioptions=agirLt
 set guifont=Monospace\ 8
-set ignorecase
 set autochdir
 set number
 set hlsearch
@@ -40,6 +39,9 @@ map <Leader>n :nohlsearch<CR>
 " Lusty Explorer
 noremap <Tab> :LustyBufferExplorer<CR>
 noremap <F2> :LustyFilesystemExplorer<CR>
+
+" Taglist
+noremap <F4> :TlistToggle<CR>
 
 " LaTeX suite stuff
 filetype plugin indent on
