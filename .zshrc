@@ -11,6 +11,10 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+autoload edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
 PATH=$PATH:/home/simon/.gem/ruby/2.2.0/bin:/home/simon/c++/imgtogb/bin:/home/simon/gb/gbdk/bin:/home/simon/share/ncbi-blast-2.2.30+/bin/
 export PATH
 
