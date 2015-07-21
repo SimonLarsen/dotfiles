@@ -2,7 +2,7 @@
 xrdb -merge ~/.Xresources &
 nm-applet &
 volwheel &
-dropboxd &
+dropbox &
 setxkbmap dk &
 cbatticon &
 exec dbus-launch /usr/bin/awesome
