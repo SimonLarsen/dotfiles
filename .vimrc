@@ -1,3 +1,14 @@
+" ls ~/.vim/bundle
+" LustyExplorer
+" mark
+" nerdtree
+" taglist.vim
+" tlib_vim
+" vim-addon-mw-utils
+" vim-latex
+" vim-snipmate
+" vim-snippets
+
 set nocompatible
 syntax on
 set laststatus=2
@@ -34,11 +45,14 @@ noremap j gj
 noremap k gk
 
 " Leaves search highlighting
-map <Leader>n :nohlsearch<CR>
+noremap <Leader>n :nohlsearch<CR>
 
 " Lusty Explorer
 noremap <Tab> :LustyBufferExplorer<CR>
 noremap <F2> :LustyFilesystemExplorer<CR>
+
+" NERDTree
+noremap <F3> :NERDTreeToggle<CR>
 
 " Taglist
 noremap <F4> :TlistToggle<CR>
