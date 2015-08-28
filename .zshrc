@@ -16,6 +16,11 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 export PS1="$(print '%{\e[1;34m%}%n%{\e[0m%}') :: $(print '%{\e[0;34m%}%~%{\e[0m%}') $ "
+
+setopt prompt_subst
+. /usr/share/git/git-prompt.sh
+export RPROMPT=$'$(__git_ps1 "%s")'
+
 export CC=gcc
 export EDITOR=vim
 export BROWSER=firefox
