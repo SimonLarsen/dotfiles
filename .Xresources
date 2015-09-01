@@ -23,8 +23,3 @@ URxvt*urgentOnBell: true
 *color14:    rgb:6b/a4/a4
 *color7:     rgb:dd/dd/dd
 *color15:    rgb:ff/ff/ff
-
-URxvt.tabbed.tabbar-fg: 1
-URxvt.tabbed.tabbar-bg: 0
-URxvt.tabbed.tab-fg:    4
-URxvt.tabbed.tab-bg:    0

@@ -40,7 +40,6 @@ alias xpaste='xclip -out'
 PATH="$PATH:/home/simon/gb/gbdk/bin/:/home/simon/c++/imgtogb/build/bin/:/home/simon/share/rstudio/bin/:$(ruby -e 'print Gem.user_dir')/bin"
 export PATH
 
-# LESS/MAN colors and stuff, needed for git colored diff
 export LESS="$LESS -iR"
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
