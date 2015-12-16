@@ -23,7 +23,6 @@ set scrolloff=5
 set showmatch
 set guioptions=agirLt
 set guifont=Monospace\ 8
-set autochdir
 set number
 set hlsearch
 
