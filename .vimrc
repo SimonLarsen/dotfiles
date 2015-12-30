@@ -14,7 +14,6 @@ syntax on
 set laststatus=2
 set mouse=a
 set hidden
-
 set autoindent
 set smartcase
 set tabstop=4
@@ -25,6 +24,7 @@ set guioptions=agirLt
 set guifont=Monospace\ 8
 set number
 set hlsearch
+set nofoldenable
 
 set suffixes=.bak,~,.o,.swp,.class
 set wildmenu
@@ -39,7 +39,7 @@ call pathogen#infect()
 vnoremap < <gv
 vnoremap > >gv
 
-" Move into breaked lines
+" Move into broken lines
 noremap j gj
 noremap k gk
 
