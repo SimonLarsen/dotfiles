@@ -1,13 +1,5 @@
 " ls ~/.vim/bundle
-" LustyExplorer
-" mark
-" nerdtree
-" taglist.vim
-" tlib_vim
-" vim-addon-mw-utils
-" vim-latex
-" vim-snipmate
-" vim-snippets
+" command-t  tlib_vim  vim-addon-mw-utils  vim-dispatch  vim-latex  vim-snipmate  vim-snippets
 
 set nocompatible
 syntax on
@@ -47,20 +39,22 @@ noremap k gk
 noremap <Leader>n :nohlsearch<CR>
 
 " Lusty Explorer
-noremap <Tab> :LustyBufferExplorer<CR>
-noremap <F2> :LustyFilesystemExplorer<CR>
-
-" NERDTree
-noremap <F3> :NERDTreeToggle<CR>
-
-" Taglist
-noremap <F4> :TlistToggle<CR>
+noremap <Tab> :CommandTBuffer<CR>
+noremap <F2> :CommandT<CR>
 
 " LaTeX suite stuff
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:Tex_DefaultTargetFormat = "pdf"
-let g:Tex_CompileRule_pdf = 'pdflatex -shell-escape -interaction=nonstopmode $*'
+let g:Tex_CompileRule_pdf = 'lualatex -shell-escape -interaction=nonstopmode $*'
 let g:tex_flavor = "latex"
 let g:Tex_ViewRule_dvi = 'evince'
 let g:Tex_ViewRule_pdf = 'evince'
+
+let g:Tex_FoldedSections = ""
+let g:Tex_FoldedEnvironments = ""
+let g:Tex_FoldedMisc = ""
+
+augroup filetypedetect
+	au BufRead,BufNewFile *.tikz setfiletype tex
+augroup END
