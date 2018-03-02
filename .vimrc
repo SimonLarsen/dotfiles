@@ -1,5 +1,5 @@
 " ls ~/.vim/bundle
-" command-t  tlib_vim  vim-addon-mw-utils  vim-dispatch  vim-latex  vim-snipmate  vim-snippets
+" command-t jellybeans.vim materialbox molokai tlib_vim vim vim-addon-mw-utils vim-dispatch vim-latex vim-snipmate vim-snippets
 
 set nocompatible
 syntax on
@@ -8,12 +8,11 @@ set mouse=a
 set hidden
 set autoindent
 set smartcase
-set tabstop=4
-set shiftwidth=4
+set tabstop=4 shiftwidth=4 expandtab
 set scrolloff=5
 set showmatch
 set guioptions=agirLt
-set guifont=Monospace\ 8
+set guifont=Ubuntu\ Mono\ 10
 set number
 set hlsearch
 set nofoldenable
@@ -22,7 +21,12 @@ set suffixes=.bak,~,.o,.swp,.class
 set wildmenu
 set wildmode=full
 
-colorscheme mustang
+set background=dark
+if has('gui_running')
+    colorscheme molokai
+else
+    colorscheme materialbox
+endif
 
 " Enable pathogen
 call pathogen#infect()
