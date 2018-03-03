@@ -1,8 +1,9 @@
-#!/bin/sh
-xrdb -merge ~/.Xresources &
+#!/usr/bin/env bash
 nm-applet &
-volwheel &
-dropbox &
-setxkbmap dk &
-cbatticon &
-exec dbus-launch /usr/bin/awesome
+dropbox start &
+xfce4-power-manager &
+xrdb -merge .Xresources &
+pasystray &
+fluxgui &
+blueman-applet &
+exec awesome

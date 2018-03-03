@@ -4,6 +4,7 @@ URxvt*transparent: true
 URxvt*tintColor: white
 URxvt*shading: 10
 URxvt*urgentOnBell: true
+URxvt*fading: 20
 
 *background: rgb:11/11/11
 *foreground: rgb:dd/dd/dd
@@ -23,3 +24,5 @@ URxvt*urgentOnBell: true
 *color14:    rgb:6b/a4/a4
 *color7:     rgb:dd/dd/dd
 *color15:    rgb:ff/ff/ff
+
+*TkTheme: alt
