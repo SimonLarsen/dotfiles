@@ -1,6 +1,3 @@
-" ls ~/.vim/bundle
-" command-t jellybeans.vim materialbox molokai tlib_vim vim vim-addon-mw-utils vim-dispatch vim-latex vim-snipmate vim-snippets
-
 set nocompatible
 syntax on
 set laststatus=2
@@ -25,7 +22,7 @@ set background=dark
 if has('gui_running')
     colorscheme molokai
 else
-    colorscheme materialbox
+    colorscheme molokai
 endif
 
 " Enable pathogen
@@ -49,15 +46,30 @@ noremap <F2> :CommandT<CR>
 " LaTeX suite stuff
 filetype plugin indent on
 set grepprg=grep\ -nH\ $*
-let g:Tex_DefaultTargetFormat = "pdf"
-let g:Tex_CompileRule_pdf = 'lualatex -shell-escape -interaction=nonstopmode $*'
-let g:tex_flavor = "latex"
-let g:Tex_ViewRule_dvi = 'evince'
-let g:Tex_ViewRule_pdf = 'evince'
 
-let g:Tex_FoldedSections = ""
-let g:Tex_FoldedEnvironments = ""
-let g:Tex_FoldedMisc = ""
+let maplocalleader = "\\"
+" let g:vimtex_view_general_viewer = 'evince'
+let g:vimtex_view_method = 'zathura'
+
+let g:vimtex_compiler_latexmk = {
+    \ 'backend' : 'jobs',
+    \ 'background' : 1,
+    \ 'build_dir' : '',
+    \ 'callback' : 1,
+    \ 'continuous' : 1,
+    \ 'executable' : 'latexmk',
+    \ 'options' : [
+    \   '-pdf',
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \ ],
+\}
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 augroup filetypedetect
 	au BufRead,BufNewFile *.tikz setfiletype tex

@@ -96,6 +96,7 @@ export BROWSER=firefox
 
 alias sprunge='curl -F "sprunge=<-" http://sprunge.us'
 
+alias vim='vim --servername vim'
 alias ls='ls --color=auto'
 alias lls='ls -l --color=auto'
 alias lla='ls -a --color=auto'

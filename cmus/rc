@@ -1,0 +1,3 @@
+set lib_sort=albumartist artist album discnumber tracknumber title filename
+add /home/simon/Music
+colorscheme molokai
