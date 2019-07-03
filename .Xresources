@@ -4,7 +4,7 @@ URxvt*transparent: true
 URxvt*tintColor: white
 URxvt*shading: 10
 URxvt*urgentOnBell: true
-URxvt*fading: 20
+URxvt*fading: 10
 
 *background: rgb:11/11/11
 *foreground: rgb:dd/dd/dd

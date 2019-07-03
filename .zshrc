@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mvn)
+plugins=(git mvn docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,16 +94,37 @@ export CC=gcc
 export EDITOR=vim
 export BROWSER=firefox
 
+export GBDKDIR=/home/simon/gb/gbdk/
+export GBDKNDIR=/home/simon/gbdk-n
+
 alias sprunge='curl -F "sprunge=<-" http://sprunge.us'
 
 alias vim='vim --servername vim'
 alias ls='ls --color=auto'
 alias lls='ls -l --color=auto'
 alias lla='ls -a --color=auto'
+alias R='radian'
 
-alias ssh_rmote='ssh -L 4321:localhost:4321 -L 8100:localhost:8100'
-PATH="/home/simon/share/blast-2.6.0/ReleaseMT/bin:/home/simon/anaconda3/bin:/home/simon/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PATH="/home/simon/gb/gbdk/bin/:/home/simon/share/blast-2.6.0/ReleaseMT/bin:/home/simon/anaconda3/bin:/home/simon/perl5/bin:/home/simon/pyimgtogb:${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/simon/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/simon/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/simon/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/simon/perl5"; export PERL_MM_OPT;
+
+# added by Anaconda3 2018.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/simon/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    \eval "$__conda_setup"
+#else
+#    if [ -f "/home/simon/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/home/simon/anaconda3/etc/profile.d/conda.sh"
+#        CONDA_CHANGEPS1=false conda activate base
+#    else
+#        \export PATH="/home/simon/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda init <<<
+export PATH="/home/simon/anaconda3/bin:$PATH"

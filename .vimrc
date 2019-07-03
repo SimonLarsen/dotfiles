@@ -1,4 +1,5 @@
 set nocompatible
+filetype plugin indent on
 syntax on
 set laststatus=2
 set mouse=a
@@ -44,7 +45,6 @@ noremap <Tab> :CommandTBuffer<CR>
 noremap <F2> :CommandT<CR>
 
 " LaTeX suite stuff
-filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 
 let maplocalleader = "\\"
@@ -59,7 +59,7 @@ let g:vimtex_compiler_latexmk = {
     \ 'continuous' : 1,
     \ 'executable' : 'latexmk',
     \ 'options' : [
-    \   '-pdf',
+    \   '-lualatex',
     \   '-verbose',
     \   '-file-line-error',
     \   '-synctex=1',
